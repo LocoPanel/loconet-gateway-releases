@@ -2,14 +2,14 @@
 
 Installable releases of the LocoNet ⇄ MQTT gateway. It bridges a Digitrax LocoNet interface
 (DCS52, PR4 or similar, over USB serial) to an MQTT broker so turnouts can be thrown and block
-occupancy read from any MQTT client. Built for [LocoPanel](https://github.com/ihancock).
+occupancy read from any MQTT client. Built for [LocoPanel](https://github.com/LocoPanel).
 
 ## Install
 
 On a Raspberry Pi (or any Debian/Ubuntu machine) with the Digitrax controller plugged in:
 
 ```sh
-curl -fsSL https://github.com/ihancock/loconet-gateway-releases/releases/latest/download/get.sh | sudo bash
+curl -fsSL https://github.com/LocoPanel/loconet-gateway-releases/releases/latest/download/get.sh | sudo bash
 ```
 
 The installer lists the serial devices it finds and asks which one is the Digitrax controller
@@ -20,7 +20,7 @@ keeps your configuration.
 Options go after `-s --`:
 
 ```sh
-curl -fsSL https://github.com/ihancock/loconet-gateway-releases/releases/latest/download/get.sh \
+curl -fsSL https://github.com/LocoPanel/loconet-gateway-releases/releases/latest/download/get.sh \
   | sudo bash -s -- --no-mosquitto --serial-port /dev/ttyACM0
 ```
 
@@ -93,7 +93,7 @@ Update by re-running the install command. To remove the service and files (Mosqu
 `/etc/loconet-gateway.env` are left alone):
 
 ```sh
-curl -fsSL https://github.com/ihancock/loconet-gateway-releases/releases/latest/download/loconet-gateway.tar.gz | tar -xz -C /tmp
+curl -fsSL https://github.com/LocoPanel/loconet-gateway-releases/releases/latest/download/loconet-gateway.tar.gz | tar -xz -C /tmp
 sudo /tmp/loconet-gateway/uninstall.sh
 ```
 
